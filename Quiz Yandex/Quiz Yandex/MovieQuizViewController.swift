@@ -96,6 +96,9 @@ class MovieQuizViewController: UIViewController {
         imageView.image = step.image
         textLabel.text = step.question
         counterLabel.text = step.questionNumber
+        
+        imageView.layer.borderColor = UIColor.clear.cgColor
+
     }
     
     // приватный метод, который меняет цвет рамки
@@ -107,7 +110,7 @@ class MovieQuizViewController: UIViewController {
         
         imageView.layer.masksToBounds = true
         imageView.layer.borderWidth = 8
-        imageView.layer.borderColor = isCorrect ? UIColor.green.cgColor : UIColor.red.cgColor
+        imageView.layer.borderColor = isCorrect ? UIColor.yaGreen.cgColor : UIColor.yaRed.cgColor
         
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { in
 //            self.showNextQuestionOrResults()
